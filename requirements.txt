@@ -51,8 +51,6 @@ moviepy==1.0.3
 multitasking==0.0.11
 narwhals==1.6.2
 numpy==1.25.2
-outcome==1.2.0
-packaging==23.1
 pandas==2.2.2
 peewee==3.17.6
 Pillow==10.0.0
