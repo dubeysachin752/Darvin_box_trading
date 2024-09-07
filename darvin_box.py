@@ -5,10 +5,10 @@ import yfinance as yf
 import numpy as np
 from datetime import datetime, timedelta
 
-os.chdir(r'C:\Sachin_Dubey\finance\Darvin Box')
+#os.chdir(r'C:\Sachin_Dubey\finance\Darvin Box')
 
 
-file_path = 'nifty_200.csv'
+file_path = 'data/nifty_200.csv'
 stocks_df = pd.read_csv(file_path)
 
 # Create a list of stock symbols from the DataFrame
