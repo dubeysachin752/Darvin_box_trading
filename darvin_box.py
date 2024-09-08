@@ -115,6 +115,19 @@ end_time = time.time()
 execution_time = end_time - start_time
 
 # Streamlit app
+st.sidebar.title("Trade Setup")
+st.sidebar.write("***Keep in mind when work arund these points while trading***")
+
+
+st.sidebar.write("1) *Select stocks who are at consolidated breakout zone.*")
+st.sidebar.write("2) *Create a 5-stock portfolio, with ₹30,000 allocated to each stock.*")
+st.sidebar.write("3) *Split the ₹30,000 investment into 10 smaller investments of ₹3,000 each or consider a 2.2% rise in investment amount.*")
+st.sidebar.write("4) *Invest ₹3,000 weekly in each selected stock.*")
+
+st.sidebar.write("5) *After 1 round of investment of 3k in 5 stocks, 2nd and next rounds of investment will be the above 2.3 % of avg price.*")
+st.sidebar.write("6) *Target for 6 % only*")
+st.sidebar.write("7) *Set GTT order on weekend only based on data of last week*")
+
 st.title('Trade with Darvin box method')
 
 st.write("Top stocks of Nifty top 200 stocks which are ready to start trading")
