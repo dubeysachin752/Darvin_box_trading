@@ -105,6 +105,7 @@ max_high_df = pd.DataFrame(last_week_df)
 
 final=pd.merge(res,max_high_df,left_on='Stock Ticker',right_on='Stock',how='left')
 result =final[['Stock Ticker','CMP','GTT_price']].sort_values(by=['CMP'],ascending=False)
+result = result.reset_index(drop=True)
 
 end_time = time.time()
 execution_time = end_time - start_time
