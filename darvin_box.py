@@ -107,14 +107,20 @@ final=pd.merge(res,max_high_df,left_on='Stock Ticker',right_on='Stock',how='left
 result =final[['Stock Ticker','CMP','GTT_price']].sort_values(by=['CMP'],ascending=False)
 result = result.reset_index(drop=True)
 
+
+remove=df[df['Market Cap']=='N/A']
+to_remove= remove[['Stock Ticker']]
+
 end_time = time.time()
 execution_time = end_time - start_time
 
 # Streamlit app
 st.title('Trade with Darvin box method')
 
-st.write("Top stocks Nifty top 200 stocks which ready to start trading")
+st.write("Top stocks of Nifty top 200 stocks which are ready to start trading")
 st.table(result)
+st.write("No price data found, possibly delisted")
+st.table(to_remove)
 # Display the execution time
 st.write(f"Execution time: {execution_time:.2f} seconds")
 
