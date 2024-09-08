@@ -4,6 +4,10 @@ import streamlit as st
 import yfinance as yf
 import numpy as np
 from datetime import datetime, timedelta
+import time  # Import the time module
+
+# Start the timer
+start_time = time.time()
 
 #os.chdir(r'C:\Sachin_Dubey\finance\Darvin Box')
 
@@ -102,11 +106,16 @@ max_high_df = pd.DataFrame(last_week_df)
 final=pd.merge(res,max_high_df,left_on='Stock Ticker',right_on='Stock',how='left')
 result =final[['Stock Ticker','CMP','GTT_price']].sort_values(by=['CMP'],ascending=False)
 
-# Streamlit app
-st.title('Stock Information')
+end_time = time.time()
+execution_time = end_time - start_time
 
-st.write("Nifty top 200 stocks:")
+# Streamlit app
+st.title('Trade with Darvin box method')
+
+st.write("Top stocks Nifty top 200 stocks which ready to start trading")
 st.table(result)
+# Display the execution time
+st.write(f"Execution time: {execution_time:.2f} seconds")
 
 
 ###python -m streamlit run darvin_box.py
