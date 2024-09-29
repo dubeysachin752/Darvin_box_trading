@@ -128,7 +128,7 @@ st.sidebar.write("5) *After 1 round of investment of 3k in 5 stocks, 2nd and nex
 st.sidebar.write("6) *Target for 6 % only*")
 st.sidebar.write("7) *Set GTT order on weekend only based on data of last week*")
 
-st.title('Trade with Darvin box method')
+st.title('Trade with Darvas box method')
 
 st.write("Top stocks of Nifty top 200 stocks which are ready to start trading")
 st.table(result)
